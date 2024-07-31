@@ -13,7 +13,7 @@ import Register from "./components/Authentication/Register";
 import axios from "axios";
 import { UserContext, UserContextProvider } from "./context/UserContext";
 
-axios.defaults.baseURL = "http://localhost:4000";
+axios.defaults.baseURL = "https://timely-cheesecake-e5fb1c.netlify.app";
 
 const router = createBrowserRouter([
   {
