@@ -28,6 +28,11 @@ const NavBar = () => {
     setOpen(false);
   }, [location]);
 
+  const handleLogout = () => {
+    Cookies.remove("token");
+    navigate("/login");
+  };
+
   return (
     <div className="fixed left-0 top-0 z-50 w-full border-b-2 bg-[#2D283D] shadow-md">
       <div className="items-center justify-between bg-none px-7 py-4 md:flex md:px-10">
@@ -79,10 +84,7 @@ const NavBar = () => {
             </button>
           ) : (
             <button
-              onClick={() => {
-                Cookies.remove("token");
-                navigate(0);
-              }}
+              onClick={handleLogout}
               className="btn flex rounded px-1 py-2 font-semibold duration-500 hover:cursor-pointer md:static md:ml-8 lg:bg-[#564f6f] lg:hover:bg-[#802bb1]"
             >
               <UserIcon className="mx-4 h-8 rounded-full bg-white p-1" />
