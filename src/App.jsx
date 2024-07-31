@@ -13,7 +13,7 @@ import Register from "./components/Authentication/Register";
 import axios from "axios";
 import { UserContext, UserContextProvider } from "./context/UserContext";
 
-axios.defaults.baseURL = "https://timely-cheesecake-e5fb1c.netlify.app";
+axios.defaults.baseURL = "https://vehicle-rental-backend-2-zoh5.onrender.com";
 
 const router = createBrowserRouter([
   {
