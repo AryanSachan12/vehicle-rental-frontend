@@ -12,6 +12,7 @@ import Cookies from "js-cookie";
 const NavBar = () => {
   const { user } = useContext(UserContext);
   const navigate = useNavigate();
+  const { setUser } = useContext(UserContext);
 
   const Links = [
     { name: "HOME", link: "/" },
@@ -30,6 +31,7 @@ const NavBar = () => {
 
   const handleLogout = () => {
     Cookies.remove("token");
+    setUser(null);
     navigate("/login");
   };
 
