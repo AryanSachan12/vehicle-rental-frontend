@@ -30,7 +30,7 @@ const NavBar = () => {
   }, [location]);
 
   const handleLogout = () => {
-    Cookies.remove("token");
+    Cookies.remove("token", { secure: true, sameSite: "None" });
     setUser(null);
     navigate("/login");
   };
